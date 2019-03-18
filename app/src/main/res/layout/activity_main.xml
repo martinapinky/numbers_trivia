@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.martina.numbers.numbers.MainActivity">
+
+    <TextView
+        android:id="@+id/text_view_show_trivia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_text_enter_number"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_text_enter_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="@string/enter_number"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/button_get_trivia"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_show_trivia"/>
+
+    <Button
+        android:id="@+id/button_get_trivia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/trivia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_enter_number"
+        android:onClick="getTrivia"/>
+
+</android.support.constraint.ConstraintLayout>
